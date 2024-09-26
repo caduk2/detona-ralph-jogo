@@ -20,6 +20,8 @@ Este projeto consiste em finalizar o Game Detona Ralph utilizando HTML, CSS e Ja
 - **"Game Over!"**: Exibido quando o jogador perde todas as vidas, acompanhado de um áudio.
 
 ## Melhorias Futuras
+- **Novo Sistema de Vidas (Visual)**: Criei no Capcut alguns arquivos para uso nesse novo sistema.
+
 - **Novos Níveis**: Adição de novos níveis com desafios progressivos.
 - **Personagens Adicionais**: Inclusão de novos personagens.
 - **Placar de Pontuação e Compartilhamento**: Permitir que os jogadores compartilhem suas pontuações nas redes sociais.
