@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../images/wall.png");
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 90px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    border-bottom: 5px solid #ffd700;
+}
+
+.panel {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square {
+    height: 170px;
+    width: 170px;
+    background: url("../images/close-window.png");
+    background-size: 72%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    transition: drop-shadow 0.3s ease-in-out;
+}
+
+.square:hover {
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));;
+}
+
+.enemy {
+    background-image: url("../images/ralph-here.png");
+    background-size: 72%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2) {
+    margin-top: 1rem;
+}
