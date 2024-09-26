@@ -19,13 +19,19 @@ const state = {
     }
 };
 
+function playSound (audioName, volume) {
+    let audio = new Audio(`/src/audios/${audioName}.m4a`);
+    audio.volume = volume || 0.2;
+    audio.play();
+}
+
 function countDown () {
     state.values.curretTime--;
     state.view.timeLeft.textContent = state.values.curretTime;
     
     if ((state.values.curretTime < 1) && (state.values.result > 0)) {
         resetCountDown();
-        playSound("wins");
+        playSound("wins", 0.5);
         
         setTimeout(() => {
             alert("Parabéns! Sua pontuação foi: " + state.values.result);
@@ -41,12 +47,6 @@ function countDown () {
 function resetCountDown() {
     clearInterval(state.actions.countDownTimerId);
     clearInterval(state.actions.timerId);
-}
-
-function playSound (audioName) {
-    let audio = new Audio(`/src/audios/${audioName}.m4a`);
-    audio.volume = 0.1;
-    audio.play();
 }
 
 let previousSquareIndex = null;
@@ -75,13 +75,13 @@ function addListenerHitBox() {
                 state.values.result++;
                 state.view.score.textContent = state.values.result;
                 state.values.hitPosition = null;
-                playSound("hit");
+                playSound("hit", 0.2);
             } else {
                 state.view.lives.textContent--;
-                playSound("miss");
+                playSound("miss", 0.5);
 
                 if (state.view.lives.textContent < 1) {
-                    playSound("end");
+                    playSound("end", 0.5);
                     
                     setTimeout(() => {
                     resetCountDown();
