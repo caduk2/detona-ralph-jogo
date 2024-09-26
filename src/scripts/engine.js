@@ -19,8 +19,8 @@ const state = {
     }
 };
 
-function playSound (audioName, volume) {
-    let audio = new Audio(`/src/audios/${audioName}.m4a`);
+function playSound (sound, volume) {
+    let audio = new Audio(`/src/audios/${sound}.m4a`);
     audio.volume = volume || 0.2;
     audio.play();
 }
